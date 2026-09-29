@@ -47,6 +47,13 @@ The main objectives of SecureEntry are:
 
 ---
 
+# 🏗️ System Architecture
+
+<p align="center">
+  <img src="Pictures/System_Architecture_Diagram.jpeg" alt="SecureEntry OTP GSM Based System Architecture Diagram" width="95%">
+</p>
+
+
 # ⭐ Key Features
 
 | Feature                       | Description                                            |
@@ -66,13 +73,11 @@ The main objectives of SecureEntry are:
 
 ---
 
-# 🏗️ System Architecture
+# 🔄 Complete Step-by-Step Workflow
 
 <p align="center">
-  <img src="Pictures/System_Architecture_Diagram.jpeg" alt="SecureEntry OTP GSM Based System Architecture Diagram" width="85%">
+  <img src="Pictures/System_Flow_diagram.jpeg" alt="SecureEntry OTP GSM based Door Access System Flow Diagram" width="95%">
 </p>
-
-# 🔄 Complete Step-by-Step Workflow
 
 ## Step 1 – Power ON
 
@@ -423,10 +428,10 @@ The user information is stored in the external EEPROM.
 
 ---
 
-# 🔁 Complete System Flow
+# 🏗️ System Overview
 
 <p align="center">
-  <img src="Pictures/System_Flow_diagram.jpeg" alt="SecureEntry OTP GSM based Door Access System Flow Diagram" width="95%">
+  <img src="Pictures/Project_diagram.jpeg" alt="SecureEntry OTP GSM Based System Diagram" width="95%">
 </p>
 
 # 📱 GSM Communication
@@ -481,24 +486,9 @@ The system then processes the received sender number and message using the GSM r
 
 # 📩 SMS Processing Flow
 
-```mermaid
-flowchart LR
-
-    A[SMS Arrives] --> B[GSM Modem]
-    B --> C[UART0]
-    C --> D[Receive Buffer]
-    D --> E[GSM_CheckSMS]
-    E --> F[Read Sender]
-    F --> G[Read Message]
-    G --> H{Valid Registered Sender?}
-
-    H -->|No| I[Ignore]
-    H -->|Yes| J{Command}
-
-    J -->|BLOCK| K[Block User]
-    J -->|UNBLOCK| L[Unblock User]
-    J -->|Other| I
-```
+<p align="center">
+  <img src="Pictures/SMS_Processing_Flow.jpeg" alt="SecureEntry OTP GSM based Door Access SMS Processing Flow Diagram" width="95%">
+</p>
 
 ---
 
@@ -745,6 +735,12 @@ flowchart LR
 
 ---
 
+# LCD Outputs:
+
+<p align="center">
+  <img src="Pictures/Lcd_Outputs_SecureOTP.jpeg" alt="SecureEntry OTP GSM based Door Access System LCD Outputs Diagram" width="85%">
+</p>
+
 # ✅ Advantages
 
 ### 🔐 1. Multi-Level Security
@@ -926,7 +922,3 @@ The result is a **multi-level embedded door access system** with local authentic
 **Programming:** Embedded C
 
 ---
-
-## 📜 License
-
-This project was developed as an academic major project for educational and demonstration purposes.

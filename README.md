@@ -30,6 +30,12 @@ After successful authentication, the LPC2148 controls a DC motor through an **L2
 
 ---
 
+# 🏗️ System Overview
+
+<p align="center">
+  <img src="Pictures/Project_diagram.jpeg" alt="SecureEntry OTP GSM Based System Diagram" width="95%">
+</p>
+
 # 🎯 Objectives
 
 The main objectives of SecureEntry are:
@@ -74,10 +80,6 @@ The main objectives of SecureEntry are:
 ---
 
 # 🔄 Complete Step-by-Step Workflow
-
-<p align="center">
-  <img src="Pictures/System_Flow_diagram.jpeg" alt="SecureEntry OTP GSM based Door Access System Flow Diagram" width="95%">
-</p>
 
 ## Step 1 – Power ON
 
@@ -429,10 +431,10 @@ The user information is stored in the external EEPROM.
 
 ---
 
-# 🏗️ System Overview
+# 🔄 Complete Workflow
 
 <p align="center">
-  <img src="Pictures/Project_diagram.jpeg" alt="SecureEntry OTP GSM Based System Diagram" width="95%">
+  <img src="Pictures/System_Flow_diagram.jpeg" alt="SecureEntry OTP GSM based Door Access System Flow Diagram" width="95%">
 </p>
 
 # 📱 GSM Communication

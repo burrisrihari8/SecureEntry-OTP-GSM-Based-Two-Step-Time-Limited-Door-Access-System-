@@ -68,29 +68,9 @@ The main objectives of SecureEntry are:
 
 # 🏗️ System Architecture
 
-```mermaid
-flowchart TD
-
-    A[🔌 Power ON] --> B[LPC2148 ARM7]
-
-    B --> C[16x2 LCD]
-    B --> D[4x4 Keypad]
-    B --> E[SPI EEPROM]
-    B --> F[RTC]
-    B --> G[UART0]
-    B --> H[External Interrupt]
-
-    G --> I[GSM Modem]
-
-    I --> J[OTP SMS]
-    I --> K[BLOCK / UNBLOCK SMS]
-
-    B --> L[L293D Motor Driver]
-    L --> M[DC Motor]
-    M --> N[🚪 Door]
-```
-
----
+<p align="center">
+  <img src="Pictures/System_Architecture_Diagram.jpeg" alt="SecureEntry OTP GSM Based System Architecture Diagram" width="85%">
+</p>
 
 # 🔄 Complete Step-by-Step Workflow
 
@@ -445,63 +425,9 @@ The user information is stored in the external EEPROM.
 
 # 🔁 Complete System Flow
 
-```mermaid
-flowchart TD
-
-    A([🔌 POWER ON]) --> B[Initialize LCD]
-    B --> C[Initialize Keypad]
-    C --> D[Initialize SPI / EEPROM]
-    D --> E[Initialize Switch & Interrupt]
-    E --> F[Initialize UART0]
-    F --> G[Initialize GSM]
-    G --> H[Initialize RTC]
-    H --> I[Initialize OTP]
-    I --> J[Load User Database]
-
-    J --> K[🔐 LOGIN]
-
-    K --> L[Enter User ID]
-    L --> M{User Found?}
-
-    M -->|No| N[USER NOT FOUND]
-    N --> K
-
-    M -->|Yes| O[Enter Password]
-    O --> P{Password Correct?}
-
-    P -->|No| Q[Failed Attempt]
-    Q --> R{3 Attempts?}
-
-    R -->|No| O
-    R -->|Yes| S[Temporary Block]
-    S --> K
-
-    P -->|Yes| T[Generate 6-Digit OTP]
-    T --> U[Send OTP Through GSM]
-    U --> V[Enter OTP]
-
-    V --> W{OTP Valid & Not Expired?}
-
-    W -->|No| X[OTP Invalid / Expired]
-    X --> K
-
-    W -->|Yes| Y[Security Buffer]
-    Y --> Z[Non-Blocking SMS Check]
-
-    Z --> AA{BLOCK Command?}
-
-    AA -->|Yes| AB[Access Denied]
-    AA -->|No| AC[ACCESS GRANTED]
-
-    AC --> AD[L293D Motor Driver]
-    AD --> AE[🚪 DOOR OPEN]
-    AE --> AF[DOOR CLOSED]
-    AF --> K
-
-    AB --> K
-```
-
----
+<p align="center">
+  <img src="Pictures/System_Flow_diagram.jpeg" alt="SecureEntry OTP GSM based Door Access System Flow Diagram" width="95%">
+</p>
 
 # 📱 GSM Communication
 

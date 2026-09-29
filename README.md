@@ -651,38 +651,60 @@ SecureEntry/
 │
 ├── README.md
 │
-├── Source/
-│   ├── main.c
-│   ├── user.c
-│   ├── user.h
-│   ├── gsm.c
+├── Header Files/
+│   ├── defines.h
+│   ├── delay.h
+│   ├── door.h
+│   ├── door_cgram.h
+│   ├── eint.h
 │   ├── gsm.h
-│   ├── eeprom.c
-│   ├── eeprom.h
-│   ├── lcd.c
+│   ├── kpm.h
+│   ├── kpm_defines.h
 │   ├── lcd.h
-│   ├── keypad.c
-│   ├── keypad.h
-│   ├── rtc.c
+│   ├── lcd_defines.h
+│   ├── otp.h
 │   ├── rtc.h
-│   ├── spi.c
 │   ├── spi.h
-│   ├── uart.c
+│   ├── spi_defines.h
+│   ├── spi_eeprom.h
+│   ├── spi_eeprom_defines.h
+│   ├── switch.h
+│   ├── types.h
 │   ├── uart.h
+│   ├── uart_defines.h
+│   └── user.h
+│
+├── Source Files/
+│   ├── main.c
+│   ├── main_dly.c
+│   ├── lcd.c
+│   ├── Keypad.c
+│   ├── uart.c
+│   ├── gsm.c
+│   ├── spi_eeprom.c
+│   ├── spi.c
+│   ├── rtc.c
 │   ├── door.c
-│   └── door.h
+│   ├── user.c
+│   ├── door_cgram.c
+│   ├── eint.c
+│   ├── otp.c
+│   └── switch.c
 │
-├── Proteus/
-│   └── SecureEntry.pdsprj
+├── Hex Files/
+│   └── SecureEntry_OTP.hex
 │
-├── Documentation/
-│   ├── Project_Report.pdf
-│   └── Block_Diagram.png
+├── Keil Project File/
+│   └── SecureEntry_OTP.uvprojx
 │
-└── Images/
-    ├── Hardware.jpg
-    ├── Proteus.jpg
-    └── Project_Output.jpg
+├── Pictures/
+│   ├── Lcd_Outputs_SecureOTP.jpeg
+│   ├── Project_diagram.jpeg
+│   ├── SMS_Processing_Flow.jpeg
+│   ├── System_Architecture_Diagram.jpeg
+│   └── System_Flow_diagram.jpeg
+│
+└── Setup and Initialization.pdf
 ```
 
 > Update the filenames according to the actual files included in the repository.

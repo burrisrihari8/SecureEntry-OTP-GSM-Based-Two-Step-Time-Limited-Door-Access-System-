@@ -421,7 +421,8 @@ The Admin menu contains:
 3. Block / Unblock
 4. Modify User
 5. Change Admin Password
-6. Exit
+6. View Users
+7. Exit
 ```
 
 The user information is stored in the external EEPROM.
